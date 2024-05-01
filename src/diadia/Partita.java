@@ -9,7 +9,7 @@ import diadia.giocatore.Giocatore;
  *
  * @author  docente di POO,Matteo Cerretani,Daniele Granato
  * @see Giocatore,Labirinto
- * @version 1.0
+ * @version 2.0
  */
 
 public class Partita {
@@ -60,6 +60,13 @@ public class Partita {
 	 */
 	public Giocatore getGiocatore() {
 		return this.giocatore;
+	}
+	/**
+	 * Verifica se il giocatore ha ancora cfu
+	 * @return true se ha ancora cfu,false altrimenti
+	 */
+	public boolean giocatoreIsVivo() {
+		return this.giocatore.getCFU()>0;
 	}
 }
 

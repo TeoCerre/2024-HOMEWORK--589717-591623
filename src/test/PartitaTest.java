@@ -11,16 +11,16 @@ class PartitaTest {
 	Partita p = new Partita();
 	Stanza s = new Stanza("Stanza");
 	@Test
-	public void testVintaPartitaVinta() {
+	public void testPartitaVinta() {
 	    p.getLabirinto().setStanzaCorrente(p.getLabirinto().getStanzaVincente());
 	    assertTrue(p.vinta());
 	}
 	@Test
-	public void testVintaPartitaNonVinta() {
+	public void testPartitaNonVinta() {
 	    assertFalse(p.vinta());
 	}
 	@Test
-	public void testVintaPartitaNonVintaAltraStanza() {
+	public void testPartitaNonVintaAltraStanza() {
 	    Stanza stanza2 = new Stanza("Stanza 2");
 	    p.getLabirinto().setStanzaCorrente(stanza2);
 	    assertFalse(p.vinta());

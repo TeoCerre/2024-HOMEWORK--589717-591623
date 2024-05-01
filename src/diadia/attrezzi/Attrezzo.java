@@ -10,7 +10,7 @@ import diadia.ambienti.Stanza;
  *
  * @author  docente di POO,Matteo Cerretani,Daniele Granato
  * @see Stanza
- * @version 1.0
+ * @version 2.0
  */
 public class Attrezzo {
 

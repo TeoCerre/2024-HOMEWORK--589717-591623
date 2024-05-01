@@ -8,16 +8,19 @@ import java.util.Scanner;
 *System.out/System.in,
 *
 @author  Matteo Cerretani,Daniele Granato
-@version 1.0
+@version 2.0
 */
-public class IOConsole {
+public class IOConsole implements IO{
+	@Override
 	public void mostraMessaggio(String msg) {
 		System.out.println(msg);
 	}
+	@Override
 	public String leggiRiga() {
 		Scanner scannerDiLinee = new Scanner(System.in);
 		String riga = scannerDiLinee.nextLine();
 		//scannerDiLinee.close();
 		return riga;
 	}
+	
 }

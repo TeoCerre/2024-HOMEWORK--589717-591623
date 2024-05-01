@@ -6,7 +6,7 @@ package diadia.ambienti;
  * Contiene la stanza vincente.
  * @author Matteo Cerretani,Daniele Granato
  * @see Stanza
- * @version 1.0
+ * @version 2.0
  */
 
 import diadia.attrezzi.Attrezzo;

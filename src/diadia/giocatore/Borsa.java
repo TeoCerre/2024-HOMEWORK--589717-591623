@@ -9,7 +9,7 @@ import diadia.attrezzi.Attrezzo;
  *
  * @author  docente di POO,Matteo Cerretani,Daniele Granato
  * @see Attrezzo
- * @version 1.0
+ * @version 2.0
  */
 
 public class Borsa {
