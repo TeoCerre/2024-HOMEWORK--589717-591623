@@ -9,7 +9,7 @@ import diadia.giocatore.Giocatore;
  *
  * @author  docente di POO,Matteo Cerretani,Daniele Granato
  * @see Giocatore,Labirinto
- * @version 2.0
+ * @version 3.0
  */
 
 public class Partita {
@@ -18,10 +18,10 @@ public class Partita {
 	private Labirinto lab;
 	private Giocatore giocatore;
 	
-	public Partita(){
+	public Partita(Labirinto labirinto){
 		this.finita = false;
-		lab=new Labirinto();
-		lab.creaStanze();
+		this.lab=labirinto;
+		//lab.creaStanze();
 		this.giocatore=new Giocatore();
 	}	
 	/**

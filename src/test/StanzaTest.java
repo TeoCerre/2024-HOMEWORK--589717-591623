@@ -10,7 +10,8 @@ import diadia.attrezzi.Attrezzo;
 class StanzaTest {
 	Stanza s1=new Stanza("s1");
 	Stanza s2=new Stanza("s2");
-	Attrezzo s=new Attrezzo("spada",10);
+	Attrezzo a=new Attrezzo("spada",10);
+	Attrezzo a1=new Attrezzo("scudo",10);
 	@Test
 	public void testImpostaStanzaAdiacente() {
 		s1.impostaStanzaAdiacente("sud",s2);
@@ -29,13 +30,13 @@ class StanzaTest {
 	}
 	@Test
 	public void testRimozioneAttrezzoEsistente() {
-	    s1.addAttrezzo(s);
-	    assertTrue(s1.removeAttrezzo("spada"));
+	    s1.addAttrezzo(a);
+	    assertTrue(s1.removeAttrezzo(a));
 	    assertNull(s1.getAttrezzo("spada"));
 	}
 	@Test
 	public void testRimozioneAttrezzoInesistente() {
-	    assertFalse(s1.removeAttrezzo("Scudo"));
+	    assertFalse(s1.removeAttrezzo(a1));
 	}
 	@Test
 	public void testGetStanzaAdiacente() {
@@ -43,6 +44,6 @@ class StanzaTest {
 	}
 	@Test
 	public void testAddAttrezzo() {
-		assertTrue(s1.addAttrezzo(s));
+		assertTrue(s1.addAttrezzo(a));
 	}
 }

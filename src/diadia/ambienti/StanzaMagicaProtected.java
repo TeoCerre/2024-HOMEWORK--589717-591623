@@ -7,7 +7,7 @@ import diadia.attrezzi.Attrezzo;
  * ovvero una classe con le variabili d'istanza visibili alle sottoclassi
  * @author Matteo Cerretani,Daniele Granato
  * @see Attrezzo
- * @version 2.0
+ * @version 3.0
 */
 public class StanzaMagicaProtected extends StanzaProtected{
 	final static private int SOGLIA_MAGICA_DEFAULT = 3;

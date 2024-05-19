@@ -9,7 +9,7 @@ import diadia.Partita;
  * Questa classe modella il comando guarda
  * ovvero il comando che mostra il contenuto della borsa o della stanza.
  * @author Matteo Cerretani,Daniele Granato
- * @version 2.0
+ * @version 3.0
 */
 
 public class ComandoGuarda implements Comando{

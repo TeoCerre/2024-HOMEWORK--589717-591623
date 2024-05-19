@@ -5,11 +5,19 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import diadia.Partita;
+import diadia.ambienti.Labirinto;
+import diadia.ambienti.LabirintoBuilder;
 import diadia.ambienti.Stanza;
 
 class PartitaTest {
-	Partita p = new Partita();
 	Stanza s = new Stanza("Stanza");
+	Labirinto labirinto= new LabirintoBuilder()
+			.addStanzaPartenza("Atrio")
+			.addAttrezzo("martello", 3)
+			.addStanzaVincente("Biblioteca")
+			.collegaStanze("nord","Atrio", "Biblioteca")
+			.getLabirinto();
+	Partita p = new Partita(labirinto);
 	@Test
 	public void testPartitaVinta() {
 	    p.getLabirinto().setStanzaCorrente(p.getLabirinto().getStanzaVincente());

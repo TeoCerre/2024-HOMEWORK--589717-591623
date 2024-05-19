@@ -10,7 +10,7 @@ import diadia.ambienti.Stanza;
  *
  * @author  docente di POO,Matteo Cerretani,Daniele Granato
  * @see Stanza
- * @version 2.0
+ * @version 3.0
  */
 public class Attrezzo {
 
@@ -48,7 +48,7 @@ public class Attrezzo {
 	 * @return la rappresentazione stringa
 	 */
 	public String toString() {
-		return this.getNome()+" ("+this.getPeso()+"kg)";
+		return this.getNome()+":"+this.getPeso();
 	}
 
 }

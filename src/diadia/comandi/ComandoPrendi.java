@@ -3,6 +3,7 @@ package diadia.comandi;
 import diadia.IO;
 import diadia.IOConsole;
 import diadia.Partita;
+import diadia.attrezzi.Attrezzo;
 
 /**
 
@@ -10,7 +11,7 @@ import diadia.Partita;
  * ovvero il comando che prende un oggetto dalla stanza attuale
  * e lo aggiunge, se possibile, nella borsa.
  * @author Matteo Cerretani,Daniele Granato
- * @version 2.0
+ * @version 3.0
 */
 
 public class ComandoPrendi implements Comando{
@@ -33,13 +34,13 @@ public class ComandoPrendi implements Comando{
 	 * @param nomeAttrezzo
 	 */
 	public void esegui(Partita partita) {
-
+		Attrezzo a=partita.getLabirinto().getStanzaCorrente().getAttrezzo(attrezzo);
 		if(this.attrezzo==null)
 	        this.IO.mostraMessaggio("Quale attrezzo vuoi prendere ?");
-	    if(partita.getLabirinto().getStanzaCorrente().getAttrezzi()[0]!=null) { 
+	    if(partita.getLabirinto().getStanzaCorrente().getAttrezzi()!=null) { 
 	      if(partita.getLabirinto().getStanzaCorrente().hasAttrezzo(this.attrezzo)==true) {
 	          partita.getGiocatore().getBorsa().addAttrezzo(partita.getLabirinto().getStanzaCorrente().getAttrezzo(this.attrezzo));
-	          partita.getLabirinto().getStanzaCorrente().removeAttrezzo(this.attrezzo);
+	          partita.getLabirinto().getStanzaCorrente().removeAttrezzo(a);
 	          this.IO.mostraMessaggio(partita.getGiocatore().getBorsa().toString());
 	      } else {
 	          this.IO.mostraMessaggio("Attrezzo inesistente");

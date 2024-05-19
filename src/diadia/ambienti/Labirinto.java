@@ -6,31 +6,30 @@ package diadia.ambienti;
  * Contiene la stanza vincente.
  * @author Matteo Cerretani,Daniele Granato
  * @see Stanza
- * @version 2.0
+ * @version 3.0
  */
 
-import diadia.attrezzi.Attrezzo;
 
 public class Labirinto {
 	private Stanza stanzaCorrente;
 	private Stanza stanzaVincente;
     /**
      * Crea tutte le stanze e le porte di collegamento
-     */
-    public void creaStanze() {
+    
+   		public void creaStanze() {
 
-		/* crea gli attrezzi */
+		// crea gli attrezzi 
     	Attrezzo lanterna = new Attrezzo("lanterna",3);
 		Attrezzo osso = new Attrezzo("osso",1);
     	
-		/* crea stanze del labirinto */
+		// crea stanze del labirinto 
 		Stanza atrio = new Stanza("Atrio");
 		Stanza aulaN11 = new Stanza("Aula N11");
 		Stanza aulaN10 = new Stanza("Aula N10");
 		Stanza laboratorio = new Stanza("Laboratorio Campus");
 		Stanza biblioteca = new Stanza("Biblioteca");
 		
-		/* collega le stanze */
+		// collega le stanze
 		atrio.impostaStanzaAdiacente("nord", biblioteca);
 		atrio.impostaStanzaAdiacente("est", aulaN11);
 		atrio.impostaStanzaAdiacente("sud", aulaN10);
@@ -44,7 +43,7 @@ public class Labirinto {
 		laboratorio.impostaStanzaAdiacente("ovest", aulaN11);
 		biblioteca.impostaStanzaAdiacente("sud", atrio);
 
-        /* pone gli attrezzi nelle stanze */
+        // pone gli attrezzi nelle stanze 
 		aulaN10.addAttrezzo(lanterna);
 		atrio.addAttrezzo(osso);
 
@@ -52,6 +51,7 @@ public class Labirinto {
         stanzaCorrente = atrio;  
 		stanzaVincente = biblioteca;
     }
+	*/
     /**
 	 * Restituisce la stanza vincente
 	 * @return  stanza vincente
@@ -73,6 +73,17 @@ public class Labirinto {
 	public Stanza getStanzaCorrente() {
 		return this.stanzaCorrente;
 	}
+	/**
+	 * Permette di impostare la stanza vincente
+	 * @param s
+	 */
+	public void setStanzaVincente(Stanza s) {
+		this.stanzaVincente=s;
+		
+	}
 	
+	public static LabirintoBuilder newBuilder() {
+		return new LabirintoBuilder();
+	}
 
 }

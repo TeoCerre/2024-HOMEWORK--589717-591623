@@ -5,13 +5,20 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import diadia.Partita;
+import diadia.ambienti.Labirinto;
+import diadia.ambienti.LabirintoBuilder;
 import diadia.attrezzi.Attrezzo;
 import diadia.comandi.Comando;
 import diadia.comandi.ComandoPrendi;
 
 class ComandoPrendiTest {
-	
-	private Partita partita= new Partita();
+	Labirinto labirinto = new LabirintoBuilder()
+			.addStanzaPartenza("Atrio")
+			.addAttrezzo("martello", 3)
+			.addStanzaVincente("Biblioteca")
+			.collegaStanze("nord","Atrio", "Biblioteca")
+			.getLabirinto();
+	private Partita partita= new Partita(labirinto);
 	private Attrezzo attrezzo= new Attrezzo("chiave", 2);
 	private Attrezzo attrezzo2=new Attrezzo("martello", 11);
 	private Comando comando=new ComandoPrendi();

@@ -5,7 +5,7 @@ package diadia.giocatore;
  * Una classe Giocatore con le sue caratteristiche
  * il giocatore parte con 20 cfu
  * @author  Matteo Cerretani,Daniele Granato
- * @version 2.0
+ * @version 3.0
  */
 
 public class Giocatore {

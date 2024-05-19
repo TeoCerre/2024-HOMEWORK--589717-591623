@@ -10,7 +10,7 @@ import diadia.ambienti.Stanza;
  * Questa classe modella il comando vai
  * ovvero il comando che permette di spostarsi da una stanza all'altra.
  * @author Matteo Cerretani,Daniele Granato
- * @version 2.0
+ * @version 3.0
 */
 
 public class ComandoVai implements Comando {

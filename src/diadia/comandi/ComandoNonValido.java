@@ -9,7 +9,7 @@ import diadia.Partita;
  * Questa classe modella il comando non valido
  * ovvero il comando che stampa il messaggio di errore se il comando non è valido.
  * @author Matteo Cerretani,Daniele Granato
- * @version 2.0
+ * @version 3.0
 */
 
 public class ComandoNonValido implements Comando{

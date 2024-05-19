@@ -21,7 +21,7 @@ public class StanzaBloccataTest {
 	
 	@Test
 	public void testGetDescrizioneDirezioneBloccata() {
-		assertEquals("Stanza bloccata nella direzione: nord"+"\nLiberati dell'attrezzo: piede di porco", stanzabloccata.getDescrizione());
+		assertEquals("Stanza bloccata nella direzione: nord"+"\nLascia nella stanza attuale l'attrezzo: piede di porco", stanzabloccata.getDescrizione());
 	}
 	
 	@Test

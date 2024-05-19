@@ -9,7 +9,7 @@ import diadia.Partita;
  * Questa classe modella il comando aiuto
  * ovvero il comando che stampa tutti i possibili comandi da poter eseguire.
  * @author Matteo Cerretani,Daniele Granato
- * @version 2.0
+ * @version 3.0
 */
 public class ComandoAiuto implements Comando {
 	

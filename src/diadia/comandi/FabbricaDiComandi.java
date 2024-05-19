@@ -5,7 +5,7 @@ package diadia.comandi;
  *
  * @author  Matteo Cerretani,Daniele Granato 
  *          
- * @version 2.0
+ * @version 3.0
  */
 public interface FabbricaDiComandi {
 	public Comando costruisciComando(String istruzione);

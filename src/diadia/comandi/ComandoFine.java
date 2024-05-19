@@ -8,7 +8,7 @@ import diadia.Partita;
  * Questa classe modella il comando fine
  * ovvero il comando che stampa il messaggio di partita finita all'utente.
  * @author Matteo Cerretani,Daniele Granato
- * @version 2.0
+ * @version 3.0
 */
 public class ComandoFine implements Comando {
 	private IOConsole IO = new IOConsole();

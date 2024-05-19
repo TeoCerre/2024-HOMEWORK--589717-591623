@@ -9,7 +9,7 @@ import diadia.Partita;
  * Questa classe modella il comando posa
  * ovvero il comando che permette di posare un attrezzo nella stanza attuale.
  * @author Matteo Cerretani,Daniele Granato
- * @version 2.0
+ * @version 3.0
 */
 public class ComandoPosa implements Comando{
 
@@ -35,7 +35,7 @@ public class ComandoPosa implements Comando{
 
 		if(this.attrezzo==null)
 	        this.IO.mostraMessaggio("Quale Attrezzo vuoi posare?");
-	    if(partita.getGiocatore().getBorsa().getAttrezzi()[0]!=null) {
+	    if(partita.getGiocatore().getBorsa().getAttrezzi()!=null) {
 	      if(partita.getGiocatore().getBorsa().hasAttrezzo(this.attrezzo)==true) {
 	          partita.getLabirinto().getStanzaCorrente().addAttrezzo(partita.getGiocatore().getBorsa().getAttrezzo(this.attrezzo));
 	          partita.getGiocatore().getBorsa().removeAttrezzo(this.attrezzo);

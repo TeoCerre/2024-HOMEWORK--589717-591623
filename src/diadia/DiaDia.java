@@ -1,6 +1,8 @@
 package diadia;
 import java.util.Scanner;
 
+import diadia.ambienti.Labirinto;
+import diadia.ambienti.LabirintoBuilder;
 import diadia.comandi.Comando;
 import diadia.comandi.FabbricaDiComandiFisarmonica;
 
@@ -13,7 +15,7 @@ import diadia.comandi.FabbricaDiComandiFisarmonica;
  * @author  docente di POO,Matteo Cerretani,Daniele Granato 
  *         (da un'idea di Michael Kolling and David J. Barnes) 
  *          
- * @version 2.0
+ * @version 3.0
  */
 
 public class DiaDia {
@@ -32,9 +34,9 @@ public class DiaDia {
 	private Partita partita;
 	private IO io;
 
-	public DiaDia(IO console) {
+	public DiaDia(IO console,Labirinto labirinto) {
 		this.io = console;
-		this.partita = new Partita();
+		this.partita = new Partita(labirinto);
 	}
 
 	public void gioca() {
@@ -71,8 +73,26 @@ public class DiaDia {
 	}
 
 	public static void main(String[] argc) {
-		IO io = new IOConsole();
-		DiaDia gioco = new DiaDia(io);
+		IO console = new IOConsole();
+		Labirinto labirinto = new LabirintoBuilder()
+										.addStanzaPartenza("Atrio")
+										.addAttrezzo("tubo", 5)
+										.addStanzaNormale("N5")
+										.addAttrezzo("lanterna", 6)
+										.addStanzaBloccata("Scale","chiave","ovest")
+										.addAttrezzo("bastone", 2)
+										.addStanzaNormale("Bagno")
+										.addAttrezzo("chiave",1)
+										.addStanzaNormale("Mensa")
+										.addStanzaVincente("Biblioteca")
+										.collegaStanze("nord","Atrio","Scale")
+										.collegaStanze("ovest","Scale","Biblioteca")
+										.collegaStanze("est","Atrio","N5")
+										.collegaStanze("nord","Mensa","Atrio")
+										.collegaStanze("sud", "N5","Bagno")
+										.collegaStanze("ovest","Bagno","Mensa")
+										.getLabirinto();
+		DiaDia gioco = new DiaDia(console, labirinto);
 		gioco.gioca();
 	}
 }

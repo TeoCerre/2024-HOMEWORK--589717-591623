@@ -7,7 +7,7 @@ package diadia.ambienti;
  * La sua descrizione stamperà un messaggio se non si possiede un oggetto per illuminarla
  * 
  * @author Matteo Cerretani,Daniele Granato
- * @version 2.0
+ * @version 3.0
 */
 public class StanzaBuia extends Stanza {
 	private String attrezzoBuio;

@@ -10,7 +10,7 @@ import diadia.Partita;
  * il nome del comando ed un parametro
  * su cui si applica il comando.
  * @author  docente di POO,Matteo Cerretani,Daniele Granato
- * @version 2.0
+ * @version 3.0
  */
 
 public interface Comando {

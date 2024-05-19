@@ -8,7 +8,7 @@ package diadia.ambienti;
  * Per sbloccarla sarà necesssario possedere un determinato oggetto.
  * 
  * @author Matteo Cerretani,Daniele Granato
- * @version 2.0
+ * @version 3.0
 */
 public class StanzaBloccata extends Stanza{
 	private String direzioneBloccata;
@@ -36,7 +36,7 @@ public class StanzaBloccata extends Stanza{
 	@Override
 	public String getDescrizione() {
 		if(!this.hasAttrezzo(attrezzoChiave))
-			return "Stanza bloccata nella direzione: "+ direzioneBloccata+"\nLiberati dell'attrezzo: " + attrezzoChiave;
+			return "Stanza bloccata nella direzione: "+ direzioneBloccata+"\nLascia nella stanza attuale l'attrezzo: " + attrezzoChiave;
 		return super.getDescrizione();
 	}
 	

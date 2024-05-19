@@ -15,10 +15,10 @@ import diadia.attrezzi.Attrezzo;
  * altrimenti si comporterà normalmente
  * @author docente di POO,Matteo Cerretani,Daniele Granato
  * @see Attrezzo
- * @version 2.0
+ * @version 3.0
 */
 
-class StanzaMagica extends Stanza {
+public class StanzaMagica extends Stanza {
 	final static private int SOGLIA_MAGICA_DEFAULT = 3;
 	private int contatoreAttrezziPosati;
 	private int sogliaMagica;
